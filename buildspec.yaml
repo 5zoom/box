@@ -1,0 +1,18 @@
+version: 0.2
+ 
+phases:
+  install:
+    commands:
+      - npm install
+  pre_build:
+    commands:
+      - npm run lint
+  build:
+    commands:
+      - npm test
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - '**/*'
